@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Favorite fruit start</title>
+    <link href="validation.css" rel="stylesheet">
+    <link href="util.css" rel="stylesheet">
+    <script src='validate.js'></script>
+</head>
+
+<body>
+
+    <div class="container-login100" id="head">
+                <h1>REGISTERATION FORM</h1>
+            </div>
+             
+                 <!-- header -->
+            
+                 <div id="header">
+                      <div id="navbar">
+                         <ul>
+                             <li><a href="#">HOME</a></li>
+                             <li><a href="#">FORGOT PASSWORD</a></li>
+                             <li><a href="#">FAQS</a></li>
+                             <li><a href="#">ABOUT US</a></li>
+                             <li><a href="#">CONTACT US</a></li>
+                         </ul>
+                     </div>
+                </div>
+    
+    <div>
+    <div class="container-login100">
+            <div class="wrap-login100 p-l-30 p-r-30 p-t-30 p-b-30" style="background: rgb(241, 171, 8)" >
+                <form class="login100-form flex-sb flex-w">
+
+            <span class="login100-form-title p-b-53">
+                    Registration form
+            </span>
+        <table id="form-table">
+        <tr>
+            
+                <div><td><span class="txt1 p-t-31 p-b-9 ">Email Address</span></td></div>
+                <div><td ><input class="wrap-input100 input100" minlength="1" type="email" id="mail" name="email" required></td></div>
+
+        </tr>
+
+        <tr >
+                <div> <td><span class="txt1 p-t-31 p-b-9">Password (8 min characters)</span></td> </div>
+                 
+                <div><td><input class="wrap-input100 input100" type="password" id="pass" name="password"
+                    minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
+                    <span class="error" aria-live="polite"></span></td></div>
+                </td>
+                </div>
+            
+        </tr>
+
+        
+        <tr>
+           
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="fN">First Name</span></td></div>
+                <div><td><input class="wrap-input100 input100" type="name" id="fN" name="name"
+                    minlength="3" maxlength="12" onkeypress='return restrictNumbers(event)'></td></div>
+            
+        </tr>
+        <tr>
+            <p>
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="lN">Last Name</span></td>
+                <div><td><input class="wrap-input100 input100" type="last" id="fN" name="last"
+                    onkeypress='return restrictNumbers(event)'></td></div>
+            </p>
+        </tr>
+
+        <tr>
+                <p>
+                    <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="photoId">Add Photo</span></td>
+                    <div><td><input class="wrap-input100" type="file" id="photoId" name="photo"></td></div>
+                </p>
+        </tr>
+
+        <tr>
+            <p>
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="countryId">Country</span></td>
+                <div><td><input class="wrap-input100 input100" type="country" id="countryId" name="country"></td></div>
+            </p>
+        </tr>
+
+        <tr>   
+            </p>
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="pinId">Pin Code</span></td>
+                <div><td><input class="wrap-input100 input100" type="pinCode" id="pinId" name="pinCode"
+                    minlength="6" maxlength="6" onkeypress='return restrictAlphabets(event)'></td></div>
+            <p>
+        </tr> 
+
+        <tr>
+            </p>
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="phoneId">Phone Number</span></td></div>
+                <div><td><input class="wrap-input100 input100" type="phone" id="phoneId" name="phone"
+                    minlength="10" maxlength="10" onkeypress='return restrictAlphabets(event)'></td></div>
+            <p>
+        </tr>
+
+        <tr>
+            <p>
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="sexId">Sex</span></td></div>
+                <div><td><input class="wrap-input100 input100" type="text" id="sexId" name="sex" list="l1"></td></div>
+                <datalist id="l1">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+                </datalist>
+
+             </p>
+        </tr>   
+
+        <tr>
+            <p>
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="questionId">Question</span></td></div>
+                <div><td><input class="wrap-input100 input100" type="text" id="questionId" name="questions" list="l2"></td></div>
+                    <datalist id="l2">
+                    <option>What is your favourite Color</option>
+                    <option>Best school friend</option>
+                    <option>Your mother's maiden name</option>
+                    </datalist>
+    
+             </p>
+        </tr>
+        <tr>
+            <p>
+                <div class="p-t-31 p-b-9"> <td><span class="txt1 p-t-31 p-b-9" for="answerId">Answer</span></td></div>
+                <div><td><input class="wrap-input100 input100" type="text" id="answerId" name="answer"></td></div>
+            </p>
+        </tr>
+          
+    </table>
+
+    <div class="container-login100-form-btn m-t-40 row">
+            <input class="login100-form-btn column" type="submit" id = "submitId" name = "sub" value="Register">
+    
+            <br>
+            <br>
+            <br>
+   
+            <input class="login100-form-btn column" type="reset" id = "resetId" name = "res" value="Reset">
+    </div>
+
+    
+
+        <div class="w-full text-center p-t-55">
+            <span class="txt2">Home</span>
+
+            <span class="txt2">FAQS</span>
+
+            <span class="txt2">About us</span>
+
+            <span class="txt2"> Cntact</span>
+        </div>
+    </form>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
+
